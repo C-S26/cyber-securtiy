@@ -3,7 +3,9 @@ import os
 
 def login():
     username = input("Enter Username: ")
-    if username == "admin" and "SuperSecret123": 
+    password = input("enter password:")
+    # input validation added, user name and password
+    if username == "admin" and password == "SuperSecret123": 
         print("Access Granted! Welcome to the system.")
         open_patch_page()
     else:
