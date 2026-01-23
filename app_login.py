@@ -3,15 +3,14 @@ import os
 import tkinter as tk
 from tkinter import messagebox
 
-# PATCH MANAGEMENT LAB: VULNERABLE GUI VERSION
-# Goal: Use Bandit to find the flaws and patch them.
+DB_PASSWORD = "653#@PasskeyAdmin"
 
 def validate_login():
     username = entry_user.get()
     password = entry_pass.get()
 
-    # VULNERABILITY 1: Hardcoded plaintext credentials
-    # Bandit will flag this as a high-severity security risk.
+    # VULNERABILITY: Hardcoded plaintext credentials 
+    # (Left here for mentees to identify with Bandit)
     if username == "admin" and password == "SuperSecret123":
         messagebox.showinfo("Success", "Access Granted! Opening Patch Page...")
         open_patch_page()
@@ -19,16 +18,18 @@ def validate_login():
         messagebox.showerror("Error", "Access Denied. Invalid credentials.")
 
 def open_patch_page():
-    # VULNERABILITY 2: Hardcoded absolute file path
-    # This exposes system architecture and is not portable.
-    file_path = os.path.abspath("E:\\cybersecurity\\patch_mgmt.html")
+    # RELATIVE PATH LOGIC: 
+    # Finds the 'patch_mgmt.html' file in the same folder as this script.
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(base_dir, "patch_mgmt.html")
     
     if os.path.exists(file_path):
         webbrowser.open(f"file://{file_path}")
     else:
-        messagebox.showwarning("Warning", f"Path not found: {file_path}")
+        # If they haven't cloned properly or renamed the file, this provides a clear error.
+        messagebox.showwarning("Warning", f"File not found. Ensure 'patch_mgmt.html' is in: {base_dir}")
 
-# tkinter GUI
+# --- GUI Setup ---
 root = tk.Tk()
 root.title("Secure Login Portal")
 root.geometry("300x200")
