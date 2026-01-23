@@ -40,7 +40,7 @@ Review the Bandit output and focus on the following:
 **Verify**: After applying your changes, run the Bandit scan again to ensure all "High" severity issues are resolved.
 
 ## 📖 Key Concepts Covered
-**SAST (Static Analysis)**: Reviewing code for flaws without actually running it.
-**Patch Management**: The lifecycle of identifying and deploying code updates to mitigate risks.
-**Secure Authentication**: Moving away from hardcoded secrets toward secure storage methods.
+- **SAST (Static Analysis)**: Reviewing code for flaws without actually running it.
+- **Patch Management**: The lifecycle of identifying and deploying code updates to mitigate risks.
+- **Secure Authentication**: Moving away from hardcoded secrets toward secure storage methods.
 
