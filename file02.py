@@ -28,7 +28,7 @@ def open_patch_page():
     else:
         messagebox.showwarning("Warning", f"Path not found: {file_path}")
 
-# --- GUI Setup ---
+# tkinter GUI
 root = tk.Tk()
 root.title("Secure Login Portal")
 root.geometry("300x200")
