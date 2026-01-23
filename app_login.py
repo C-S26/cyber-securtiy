@@ -10,7 +10,6 @@ def validate_login():
     password = entry_pass.get()
 
     # VULNERABILITY: Hardcoded plaintext credentials 
-    # (Left here for mentees to identify with Bandit)
     if username == "admin" and password == "SuperSecret123":
         messagebox.showinfo("Success", "Access Granted! Opening Patch Page...")
         open_patch_page()
@@ -26,7 +25,6 @@ def open_patch_page():
     if os.path.exists(file_path):
         webbrowser.open(f"file://{file_path}")
     else:
-        # If they haven't cloned properly or renamed the file, this provides a clear error.
         messagebox.showwarning("Warning", f"File not found. Ensure 'patch_mgmt.html' is in: {base_dir}")
 
 # --- GUI Setup ---
