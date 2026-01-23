@@ -26,7 +26,7 @@ pip install bandit
 Open your terminal in the repository folder and execute a recursive scan to identify vulnerabilities:
 
 ```bash 
-bandit -r .
+bandit -r app_login.py
 ```
 
 ### 3. Analyze the Findings
