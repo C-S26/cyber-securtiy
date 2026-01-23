@@ -1,7 +1,3 @@
-Acknowledged. I will structure the repository content to focus on the setup, scanning process, and the logic of the patch without displaying the full code blocks directly in the response. This will encourage your mentees to clone the repository and interact with the code in their own environment.
-
-Here is the GitHub-ready Markdown for this topic:
-
 # 🛠️ Lab: Patch Management & Static Analysis with Bandit
 
 This repository focuses on **Static Application Security Testing (SAST)**. You will use **Bandit**, a tool designed to find common security issues in Python code, to analyze a login script and then apply a "patch" to fix the vulnerabilities.
